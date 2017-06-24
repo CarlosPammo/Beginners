@@ -1,0 +1,14 @@
+﻿<Window x:Class="WpfDelegates.Inicio"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfDelegates"
+        mc:Ignorable="d"
+        Title="Inicio" Height="300" Width="455">
+    <Grid Margin="0,0,2,0">
+        <Label Content="          WELCOME    &#xD;&#xA;     CONTACT-FAST" HorizontalAlignment="Left" Margin="140,50,0,0" VerticalAlignment="Top" Height="50" Width="200" FontFamily="Rockwell Extra Bold" FontSize="18"/>
+        <Button Content="Contact Person" HorizontalAlignment="Left" Margin="140,181,0,0" VerticalAlignment="Top" Height="40" Width="160" FontSize="14" FontFamily="Rockwell Extra Bold" Click="BtnRegisterPerson_Mode_Click"/>
+
+    </Grid>
+</Window>

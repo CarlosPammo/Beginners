@@ -1,0 +1,35 @@
+﻿<Window x:Class="WpfDelegates.Mas"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfDelegates"
+        mc:Ignorable="d"
+        Title="Mas" Height="382" Width="614">
+    <Grid Margin="0,0,2,0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="266*"/>
+            <RowDefinition Height="0*"/>
+            <RowDefinition Height="3*"/>
+        </Grid.RowDefinitions>
+        <DataGrid x:Name="DGmas" Grid.Row="0" Margin="10,15,15,7" 
+                  DataContext="{Binding}" ItemsSource="{Binding}" AutoGenerateColumns="False" SelectionChanged="DGmas_SelectionChanged">
+            <DataGrid.Columns>
+                <DataGridTextColumn x:Name="DGdir" Header="    Dir  Trabajo  "  Binding="{Binding Path=dir}" Width="100"/>
+                <DataGridTextColumn x:Name="DGfax" Header="      fax" Binding="{Binding Path=fax}" Width="90"/>
+                <DataGridTextColumn x:Name="DGTeltrab" Header="      Num Trabajo" Binding="{Binding Path=trabajo}" Width="100"/>
+                <DataGridTextColumn x:Name="DGrefer" Header=" Num Referensia" Binding="{Binding Path=referencia}" Width="100"/>
+                <DataGridTextColumn x:Name="DGotros" Header="     otros" Binding="{Binding Path=otros}" Width="100"/>
+
+                <DataGridTemplateColumn>
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button Content="Editar" Click="Update_Click"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Window>
